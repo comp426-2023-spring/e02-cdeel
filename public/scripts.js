@@ -2,7 +2,7 @@
 // check out the coin-server example from a previous COMP 426 semester.
 // https://github.com/jdmar3/coinserver
 async function playGame() {
-    var game = Array.from(document.getElementByName("game_select")).find(mode => mode.checked)?.value;
+    var game = Array.from(document.getElementsByName("game_select")).find(mode => mode.checked)?.value;
     var shot = document.getElementById("myDropdown").value;
 
     if (document.getElementById("opponent").checked) {

@@ -60,7 +60,7 @@ if (args.debug) {
 // Create an app server
 const app = express()
 // Set a port for the server to listen on
-const port = args.port || args.p || process.env.PORT || 5000
+const port = args.port || args.p || process.env.PORT || 8080
 // Load app middleware here to serve routes, accept data requests, etc.
 //
 // Create and update access log
@@ -109,6 +109,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.get('/app', (req, res) => {res.status(200).send("200 OK");})
+
+app.get('/app/rps', (req, res) => {res.status(200).send(rps());})
 
 app.get('/app/rpsls', (req, res) => {res.status(200).send(rpsls());})
 
