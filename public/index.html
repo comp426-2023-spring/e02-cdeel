@@ -1,12 +1,24 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Rock</title>
         <!-- Link to your script file(s) and CSS in here somewhere -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./styles.css" rel="stylesheet">
+		<script src="./scripts.js"></script>
     </head>
     <body>
-
-    <!-- Your interface markup goes here -->
-    <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
-
+        <p>Rock, Paper, Scissors(,Lizard, Spock)</p>
+        <input type="radio" id="rps_button" name="game_select" value="rps" onclick="updateOptions()">
+        <label for="rps_button">RPS</label><br>
+        <input type="radio" id="rpsls_button" name="game_select" value="rpsls" onclick="updateOptions()">
+        <label for="rps_button">RPSLS</label><br>
+        <br>
+        <input type="checkbox" id="opponent" name="opponent_check" value="opponent">
+        <label for="opponent">Play with opponent?</label><br>
+        <select id="myDropdown"></select>
+        <p id="result"></p>
+        <button onclick="playGame()">PLAY</button>
     </body>
 </html>
