@@ -103,7 +103,6 @@ process.on('SIGINT', () => {
     })
 })
 
-import minimist from 'minimist';
 import { rps, rpsls } from './lib/rpsls.js';
 
 app.use(express.json());
